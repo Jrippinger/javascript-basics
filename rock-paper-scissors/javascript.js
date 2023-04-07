@@ -1,7 +1,9 @@
+//Global Variables
 let playerScore
 let computerScore
 let input
 
+//Function provides a random choice for the computer using Math.random
 function getComputerChoice(){
   let random = Math.random()
   
@@ -19,6 +21,7 @@ function getComputerChoice(){
   }
 }
 
+//Function deterimnes if players Win, lose, or tie. Has two parameters, one for player and one for computer. Parameters can be changed when called on its own, but are case sensitive
 function playRound(playerSelection, computerSelection){
     if(playerSelection == "Rock" && computerSelection == "Scissors"){
         playerScore++
@@ -51,6 +54,7 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+//Helper function that converts word turns input into having a capital first and and all else into lowercase
 function correct(word){
     word = word.toLowerCase()
     let fl = word.slice(0,1)
@@ -58,6 +62,7 @@ function correct(word){
     return word
 }
 
+//A simple game of Rock Paper Scissors. For 5 turns the player will be asked for their input. If answer is not valid, they will be asked to try again. Once rounds are complete Results and scores are given
 function game(){
     playerScore = 0
     computerScore = 0
